@@ -1,0 +1,13 @@
+rootProject.name = 'gcloud'
+
+include 'gcloud-eureka-server'
+include 'gcloud-admin'
+include 'gcloud-sleuth'
+include 'gcloud-zuul'
+include 'gcloud-config'
+include 'gcloud-turbine'
+include 'gcloud-common'
+include 'gcloud-service-test-api'
+include 'gcloud-service-test'
+include 'gcloud-web-test'
+

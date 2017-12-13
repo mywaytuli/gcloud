@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: admin-dashboard
+
+server:
+  port: ${port:8505}
+
+security.basic.enabled: false
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka.serviceUrl:http://127.0.0.1:8501/eureka/}
+  instance:
+    hostname: ${hostname:admin}
+    prefer-ip-address: true
+

@@ -1,0 +1,34 @@
+#spring:
+#  application:
+#    name: gcloud-web-test
+
+security.basic.enabled: false
+
+server:
+  port: ${web.server.port:8100}
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  instance:
+    status-page-url: http://localhost:${server.port}/swagger-ui.html # ${server.port}为该服务的端口号
+  client:
+    serviceUrl:
+      defaultZone: ${eureka.serviceUrl:http://127.0.0.1:8501/eureka/}
+
+spring:
+  application:
+    name: gcloud-web-test
+  zipkin:
+    base-url: http://localhost:8504
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
